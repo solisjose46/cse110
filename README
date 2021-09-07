@@ -1,0 +1,5 @@
+1.Compile java file with javac
+ex: javac example.java
+
+2.Run bytecode (class file) with java
+ex: java example or java example.class
