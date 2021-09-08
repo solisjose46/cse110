@@ -67,7 +67,7 @@ public class Assignment1
 
 		ones = remainingCash;
 
-		System.out.println("\t$" + String.format("%,d", cash) + " is");
+		System.out.println("\n\t$" + String.format("%,d", cash) + " is");
 		System.out.println("\t\t$100 Bills\t" + hundreds);
 		System.out.println("\t\t$20 Bills\t" + twenties);
 		System.out.println("\t\t$10 Bills\t" + tens);
@@ -101,7 +101,7 @@ public class Assignment1
 
 		seconds = remainingTime;
 
-		System.out.println("\t" + String.format("%,d", time) + " seconds are");
+		System.out.println("\n\t" + String.format("%,d", time) + " seconds are");
 		System.out.println("\t\t" + days + "\tDays");
 		System.out.println("\t\t" + hours + "\tHours");
 		System.out.println("\t\t" + minutes + "\tMinutes");
