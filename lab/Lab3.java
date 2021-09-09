@@ -19,10 +19,10 @@ public class Lab3
 		String s1 = new String("");
 		Scanner in = new Scanner(System.in);
 		
-		n1 = in.nextInt();
-		n2 = in.nextInt();
-		n3 = in.nextInt();
-		n4 = in.nextInt();
+		n1 = in.nextDouble();
+		n2 = in.nextDouble();
+		n3 = in.nextDouble();
+		n4 = in.nextDouble();
 
 		//find max
 		if(n1 > n2){
