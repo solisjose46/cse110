@@ -1,0 +1,22 @@
+#!/bin/bash
+
+declare -a testcases=("1 4 6" "1 6 4" "4 1 6" "4 6 1" "6 1 4" "6 4 1")
+
+echo -ne "Compiling ThreeInteger ....\n"
+
+
+if javac ThreeInteger.java; then
+	echo -ne "Compile successful\n"
+
+	for i in "${testcases[@]}"
+	do
+		echo -ne "\nRunning test case\t$i:\n"
+		echo -ne "----------------------------\n"
+		echo -ne "$i" | java ThreeInteger
+	done
+		
+
+else
+	echo -ne "Compile failed!"
+fi
+

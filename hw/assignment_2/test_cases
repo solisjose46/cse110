@@ -1,0 +1,22 @@
+#!/bin/bash
+
+declare -a testcases=("Smith joHN mike" "smith mIke joHN" "miKE smiTH john" "mike JOHN smitH" "john mike smith" "john smith MIKE" "7james chris GEORGE" "george 7james chriS" "GEORGE chris 7James")
+
+echo -ne "Compiling Assignment2.java ....\n"
+
+
+if javac Assignment2.java; then
+	echo -ne "Compile successful\n"
+
+	for i in "${testcases[@]}"
+	do
+		echo -ne "\nRunning test case\t$i:\n"
+		echo -ne "----------------------------\n"
+		echo -ne "$i" | java Assignment2
+	done
+		
+
+else
+	echo -ne "\nCompile failed!\n"
+fi
+
