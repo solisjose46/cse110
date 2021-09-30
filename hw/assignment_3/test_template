@@ -1,0 +1,23 @@
+#!/bin/bash
+
+declare -a testcases=("A 0 0 1 1 1 0 1 D Q" "r b q")
+
+echo -ne "Compiling CommandTemplate.java ....\n"
+
+
+if javac CommandTemplate.java; then
+	echo -ne "Compile successful\n"
+	echo -ne "-----------------------------\n"
+
+	for i in "${testcases[@]}"
+	do
+		echo -ne "\nRunning test case\t$i:\n"
+		echo -ne "----------------------------\n"
+		echo -ne $i | java CommandTemplate
+	done
+		
+
+else
+	echo -ne "\nCompile failed!\n"
+fi
+
