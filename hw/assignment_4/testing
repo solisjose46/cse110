@@ -1,0 +1,26 @@
+#!/bin/bash
+
+clear
+
+declare -a testcases=("case1.txt")
+
+echo -ne "Compiling Assignment4.java and FiveCards.java....\n\n"
+
+
+if javac -Xlint:deprecation Assignment4.java && javac -Xlint:deprecation FiveCards.java; then
+	echo -ne "Compile successful!\n"
+	echo -ne "-----------------------------\n\n"
+
+	for i in "${testcases[@]}"
+	do
+		echo -ne "\nRunning test case\t$i:\n"
+		echo -ne "----------------------------\n"
+		echo -ne | cat $i | java Assignment4
+	done
+		
+
+else
+	echo -ne "\nCompile failed!\n"
+fi
+
+rm *.class

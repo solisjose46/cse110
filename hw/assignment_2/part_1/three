@@ -20,3 +20,4 @@ else
 	echo -ne "Compile failed!"
 fi
 
+rm *.class
